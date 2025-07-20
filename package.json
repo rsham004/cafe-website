@@ -1,0 +1,21 @@
+{
+  "name": "cafe-website",
+  "version": "1.0.0",
+  "description": "A modern, responsive website for Cozy Corner Cafe built using the ruv-swarm 3-agent development approach. This website showcases the cafe's offerings, story, and provides an easy way for customers to connect.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rsham004/cafe-website.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/rsham004/cafe-website/issues"
+  },
+  "homepage": "https://github.com/rsham004/cafe-website#readme"
+}

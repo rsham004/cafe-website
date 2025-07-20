@@ -1,6 +1,9 @@
 // Cozy Corner Cafe - JavaScript Functionality
 // Agent 1: Full-Stack Developer - Interactive features and form handling
 
+import { isValidEmail, validateInput } from './utils.js';
+import { showNotification } from './ui.js';
+
 document.addEventListener('DOMContentLoaded', function() {
     // Mobile Navigation Toggle
     const mobileMenu = document.getElementById('mobile-menu');
@@ -225,129 +228,11 @@ document.addEventListener('DOMContentLoaded', function() {
 
 // Utility Functions
 
-function isValidEmail(email) {
-    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    return emailRegex.test(email);
-}
 
-function validateInput(input) {
-    const value = input.value.trim();
-    const inputType = input.type;
-    const inputName = input.name;
 
-    // Remove existing error message
-    const existingError = input.parentNode.querySelector('.error-message');
-    if (existingError) {
-        existingError.remove();
-    }
 
-    let isValid = true;
-    let errorMessage = '';
 
-    // Validation rules
-    if (!value) {
-        isValid = false;
-        errorMessage = 'This field is required.';
-    } else if (inputType === 'email' && !isValidEmail(value)) {
-        isValid = false;
-        errorMessage = 'Please enter a valid email address.';
-    } else if (inputName === 'name' && value.length < 2) {
-        isValid = false;
-        errorMessage = 'Name must be at least 2 characters long.';
-    } else if (inputName === 'subject' && value.length < 3) {
-        isValid = false;
-        errorMessage = 'Subject must be at least 3 characters long.';
-    } else if (inputName === 'message' && value.length < 10) {
-        isValid = false;
-        errorMessage = 'Message must be at least 10 characters long.';
-    }
 
-    // Apply validation styling
-    if (!isValid) {
-        input.style.borderColor = '#e74c3c';
-        const errorDiv = document.createElement('div');
-        errorDiv.className = 'error-message';
-        errorDiv.style.color = '#e74c3c';
-        errorDiv.style.fontSize = '0.9rem';
-        errorDiv.style.marginTop = '5px';
-        errorDiv.textContent = errorMessage;
-        input.parentNode.appendChild(errorDiv);
-    } else {
-        input.style.borderColor = '#27ae60';
-    }
-
-    return isValid;
-}
-
-function showNotification(message, type = 'info') {
-    // Remove existing notifications
-    const existingNotifications = document.querySelectorAll('.notification');
-    existingNotifications.forEach(notification => notification.remove());
-
-    // Create notification element
-    const notification = document.createElement('div');
-    notification.className = `notification notification-${type}`;
-    notification.textContent = message;
-
-    // Styling
-    notification.style.cssText = `
-        position: fixed;
-        top: 20px;
-        right: 20px;
-        padding: 15px 20px;
-        border-radius: 8px;
-        color: white;
-        font-weight: 500;
-        z-index: 10000;
-        transform: translateX(100%);
-        transition: transform 0.3s ease;
-        max-width: 300px;
-        box-shadow: 0 4px 12px rgba(0,0,0,0.15);
-    `;
-
-    // Type-specific styling
-    switch (type) {
-        case 'success':
-            notification.style.backgroundColor = '#27ae60';
-            break;
-        case 'error':
-            notification.style.backgroundColor = '#e74c3c';
-            break;
-        case 'warning':
-            notification.style.backgroundColor = '#f39c12';
-            break;
-        default:
-            notification.style.backgroundColor = '#3498db';
-    }
-
-    // Add to page
-    document.body.appendChild(notification);
-
-    // Animate in
-    setTimeout(() => {
-        notification.style.transform = 'translateX(0)';
-    }, 100);
-
-    // Auto remove after 5 seconds
-    setTimeout(() => {
-        notification.style.transform = 'translateX(100%)';
-        setTimeout(() => {
-            if (notification.parentNode) {
-                notification.remove();
-            }
-        }, 300);
-    }, 5000);
-
-    // Click to dismiss
-    notification.addEventListener('click', function() {
-        this.style.transform = 'translateX(100%)';
-        setTimeout(() => {
-            if (this.parentNode) {
-                this.remove();
-            }
-        }, 300);
-    });
-}
 
 // Performance Optimization
 // Debounce function for scroll events
