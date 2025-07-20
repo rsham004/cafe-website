@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Cozy Corner Cafe - Artisanal coffee, fresh pastries, and warm atmosphere in the heart of downtown">
+    <title>Cozy Corner Cafe - Artisanal Coffee & Fresh Pastries</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <h2>Cozy Corner</h2>
+            </div>
+            <ul class="nav-menu" id="nav-menu">
+                <li class="nav-item">
+                    <a href="#home" class="nav-link">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#menu" class="nav-link">Menu</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#about" class="nav-link">About</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#location" class="nav-link">Location</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#contact" class="nav-link">Contact</a>
+                </li>
+            </ul>
+            <div class="nav-toggle" id="mobile-menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h1 class="hero-title">Welcome to Cozy Corner Cafe</h1>
+            <p class="hero-subtitle">Where every cup tells a story and every bite feels like home</p>
+            <a href="#menu" class="cta-button">Explore Our Menu</a>
+        </div>
+        <div class="hero-overlay"></div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <div class="about-content">
+                <div class="about-text">
+                    <h2>Our Story</h2>
+                    <p>Founded in 2018, Cozy Corner Cafe began as a dream to create a warm, welcoming space where the community could gather over exceptional coffee and homemade treats. Our passion for quality ingredients and artisanal craftsmanship shines through in every cup we serve and every pastry we bake.</p>
+                    <p>We source our beans from sustainable farms around the world, roast them in small batches, and brew each cup with care. Our kitchen creates fresh pastries, sandwiches, and light meals daily, using locally sourced ingredients whenever possible.</p>
+                </div>
+                <div class="about-image">
+                    <div class="image-placeholder">
+                        <p>Cozy Interior Photo</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Menu Section -->
+    <section id="menu" class="menu">
+        <div class="container">
+            <h2 class="section-title">Our Menu</h2>
+            
+            <div class="menu-categories">
+                <button class="menu-filter active" data-filter="all">All</button>
+                <button class="menu-filter" data-filter="coffee">Coffee</button>
+                <button class="menu-filter" data-filter="food">Food</button>
+                <button class="menu-filter" data-filter="pastries">Pastries</button>
+            </div>
+
+            <div class="menu-grid">
+                <!-- Coffee Items -->
+                <div class="menu-item" data-category="coffee">
+                    <div class="menu-item-image">
+                        <div class="image-placeholder">Espresso</div>
+                    </div>
+                    <div class="menu-item-content">
+                        <h3>Classic Espresso</h3>
+                        <p>Rich, bold shot of our signature blend</p>
+                        <span class="price">$3.50</span>
+                    </div>
+                </div>
+
+                <div class="menu-item" data-category="coffee">
+                    <div class="menu-item-image">
+                        <div class="image-placeholder">Cappuccino</div>
+                    </div>
+                    <div class="menu-item-content">
+                        <h3>Cappuccino</h3>
+                        <p>Perfect balance of espresso, steamed milk, and foam</p>
+                        <span class="price">$4.25</span>
+                    </div>
+                </div>
+
+                <div class="menu-item" data-category="coffee">
+                    <div class="menu-item-image">
+                        <div class="image-placeholder">Latte</div>
+                    </div>
+                    <div class="menu-item-content">
+                        <h3>Vanilla Latte</h3>
+                        <p>Smooth espresso with steamed milk and vanilla syrup</p>
+                        <span class="price">$4.75</span>
+                    </div>
+                </div>
+
+                <!-- Food Items -->
+                <div class="menu-item" data-category="food">
+                    <div class="menu-item-image">
+                        <div class="image-placeholder">Sandwich</div>
+                    </div>
+                    <div class="menu-item-content">
+                        <h3>Grilled Panini</h3>
+                        <p>Fresh mozzarella, tomato, and basil on artisan bread</p>
+                        <span class="price">$8.95</span>
+                    </div>
+                </div>
+
+                <div class="menu-item" data-category="food">
+                    <div class="menu-item-image">
+                        <div class="image-placeholder">Salad</div>
+                    </div>
+                    <div class="menu-item-content">
+                        <h3>Garden Salad</h3>
+                        <p>Mixed greens, cherry tomatoes, cucumber, house vinaigrette</p>
+                        <span class="price">$7.50</span>
+                    </div>
+                </div>
+
+                <!-- Pastry Items -->
+                <div class="menu-item" data-category="pastries">
+                    <div class="menu-item-image">
+                        <div class="image-placeholder">Croissant</div>
+                    </div>
+                    <div class="menu-item-content">
+                        <h3>Butter Croissant</h3>
+                        <p>Flaky, buttery pastry baked fresh daily</p>
+                        <span class="price">$3.25</span>
+                    </div>
+                </div>
+
+                <div class="menu-item" data-category="pastries">
+                    <div class="menu-item-image">
+                        <div class="image-placeholder">Muffin</div>
+                    </div>
+                    <div class="menu-item-content">
+                        <h3>Blueberry Muffin</h3>
+                        <p>Moist muffin bursting with fresh blueberries</p>
+                        <span class="price">$3.75</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Location Section -->
+    <section id="location" class="location">
+        <div class="container">
+            <h2 class="section-title">Visit Us</h2>
+            <div class="location-content">
+                <div class="location-info">
+                    <div class="info-block">
+                        <h3>Address</h3>
+                        <p>123 Main Street<br>Downtown District<br>City, State 12345</p>
+                    </div>
+                    <div class="info-block">
+                        <h3>Hours</h3>
+                        <p>Monday - Friday: 6:30 AM - 8:00 PM<br>
+                           Saturday: 7:00 AM - 9:00 PM<br>
+                           Sunday: 8:00 AM - 6:00 PM</p>
+                    </div>
+                    <div class="info-block">
+                        <h3>Contact</h3>
+                        <p>Phone: (555) 123-4567<br>
+                           Email: hello@cozycornercafe.com</p>
+                    </div>
+                </div>
+                <div class="location-map">
+                    <div class="map-placeholder">
+                        <p>Interactive Map<br>(Google Maps Integration)</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2 class="section-title">Get In Touch</h2>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <h3>We'd Love to Hear From You</h3>
+                    <p>Whether you have questions about our menu, want to book a private event, or just want to say hello, we're here to help!</p>
+                </div>
+                <form class="contact-form" id="contact-form">
+                    <div class="form-group">
+                        <input type="text" id="name" name="name" placeholder="Your Name" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" id="email" name="email" placeholder="Your Email" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="text" id="subject" name="subject" placeholder="Subject" required>
+                    </div>
+                    <div class="form-group">
+                        <textarea id="message" name="message" placeholder="Your Message" rows="5" required></textarea>
+                    </div>
+                    <button type="submit" class="submit-button">Send Message</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Cozy Corner Cafe</h3>
+                    <p>Creating memorable moments, one cup at a time.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#menu">Menu</a></li>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#location">Location</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Follow Us</h4>
+                    <div class="social-links">
+                        <a href="#" aria-label="Facebook">Facebook</a>
+                        <a href="#" aria-label="Instagram">Instagram</a>
+                        <a href="#" aria-label="Twitter">Twitter</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Cozy Corner Cafe. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
