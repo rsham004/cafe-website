@@ -4,7 +4,49 @@
 import { isValidEmail, validateInput } from './utils.js';
 import { showNotification } from './ui.js';
 
+// IMPORTANT: Replace with your actual Stripe publishable key
+const stripe = Stripe('pk_test_YOUR_PUBLISHABLE_KEY');
+
 document.addEventListener('DOMContentLoaded', function() {
+    const payButtons = document.querySelectorAll('.pay-now-button');
+
+    payButtons.forEach(button => {
+        button.addEventListener('click', function() {
+            const price = this.getAttribute('data-price');
+
+            // This is where you would typically make a call to your backend
+            // to create a Stripe Checkout session.
+            // Since this is a static site, we will simulate this.
+            console.log(`Creating a checkout session for price: ${price}`);
+
+            // The following is a placeholder and will not work without a backend.
+            // A backend is required to securely create a Checkout Session.
+            // See https://stripe.com/docs/payments/checkout/client-only
+            
+            // Example of what the backend call might look like:
+            /*
+            fetch('/create-checkout-session', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({
+                    price: price,
+                }),
+            })
+            .then(response => response.json())
+            .then(session => {
+                return stripe.redirectToCheckout({ sessionId: session.id });
+            })
+            .catch(error => {
+                console.error('Error:', error);
+            });
+            */
+
+            alert('This is a demo. A backend is required to process payments.');
+        });
+    });
+});
     // Mobile Navigation Toggle
     const mobileMenu = document.getElementById('mobile-menu');
     const navMenu = document.getElementById('nav-menu');
