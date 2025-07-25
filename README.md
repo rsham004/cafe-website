@@ -1,4 +1,4 @@
-# Cozy Corner Cafe Website
+# Cozy Corner Cafe Website Experiment with autonomous coding
 
 ## 🎯 Project Overview
 A modern, responsive website for Cozy Corner Cafe built using the ruv-swarm 3-agent development approach. This website showcases the cafe's offerings, story, and provides an easy way for customers to connect.
